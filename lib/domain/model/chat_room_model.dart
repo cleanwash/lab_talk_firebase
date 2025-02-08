@@ -27,7 +27,7 @@ class ChatroomModel {
     this.reference,
   });
 
-  // JSON에서 ChatroomModel 생성
+  // FromJson
   factory ChatroomModel.fromJson(Map<String, dynamic> json,
       {DocumentReference? ref}) {
     return ChatroomModel(
@@ -45,7 +45,7 @@ class ChatroomModel {
     );
   }
 
-  // Firestore 스냅샷에서 생성
+  // FromSnapshot
   factory ChatroomModel.fromSnapshot(
       DocumentSnapshot<Map<String, dynamic>> snapshot) {
     return ChatroomModel.fromJson(
@@ -54,7 +54,7 @@ class ChatroomModel {
     );
   }
 
-  // Map으로 변환 (Firestore 저장용)
+  // ToMap
   Map<String, dynamic> toMap() {
     return {
       'chatroomKey': chatroomKey,
@@ -64,13 +64,13 @@ class ChatroomModel {
       if (buyerName != null) 'buyerName': buyerName,
       if (sellerName != null) 'sellerName': sellerName,
       'lastMsg': lastMsg,
-      'lastMsgTime': Timestamp.fromDate(lastMsgTime),
+      'lastMsgTime': FieldValue.serverTimestamp(), // 서버 타임스탬프 사용
       'lastMsgUserKey': lastMsgUserKey,
       'status': status,
     };
   }
 
-  // 채팅방 키 생성
+  // 채팅방 키 생성 유틸리티 메서드
   static String generateChatRoomKey(
       String buyerId, String sellerId, String requestId) {
     return '${buyerId}_${sellerId}_$requestId';
