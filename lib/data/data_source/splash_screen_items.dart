@@ -1,5 +1,5 @@
 import 'package:lab_talk_firebase/core/util/assets_path.dart';
-import 'package:lab_talk_firebase/domain/domain/splash_screen_item.dart';
+import 'package:lab_talk_firebase/domain/model/splash_screen_item.dart';
 
 class SplashScreenItems {
   final List<SplashScreenItem> items = [
