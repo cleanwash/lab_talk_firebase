@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "792440359626",
+    "project_id": "labtalk-8ad4d",
+    "storage_bucket": "labtalk-8ad4d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792440359626:android:94cc439d66ea49716d0233",
+        "android_client_info": {
+          "package_name": "com.labtalks.labtalk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS_0d1r5XxWmCaIaRssy4Z2K8kfuMRPxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
