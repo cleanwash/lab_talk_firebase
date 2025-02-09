@@ -50,19 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAS_0d1r5XxWmCaIaRssy4Z2K8kfuMRPxk',
-    appId: '1:792440359626:android:94cc439d66ea49716d0233',
-    messagingSenderId: '792440359626',
-    projectId: 'labtalk-8ad4d',
-    storageBucket: 'labtalk-8ad4d.firebasestorage.app',
+    apiKey: 'AIzaSyApLQoY6F9XNbqdhayvj1bZ5gDRtEgpZuE',
+    appId: '1:803274564320:android:83de9193e41173288e2685',
+    messagingSenderId: '803274564320',
+    projectId: 'labtalk-d5395',
+    storageBucket: 'labtalk-d5395.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDnk_MdAlc5qHElgDmiJOfT-gYN1JauwhY',
-    appId: '1:792440359626:ios:c78f3ff8675b39136d0233',
-    messagingSenderId: '792440359626',
-    projectId: 'labtalk-8ad4d',
-    storageBucket: 'labtalk-8ad4d.firebasestorage.app',
-    iosBundleId: 'com.labtalks.labtalk',
+    apiKey: 'AIzaSyB1d2KIEbA1JxwSlKidNfuQnG1L8f-G9SM',
+    appId: '1:803274564320:ios:fe485c5d80ed982e8e2685',
+    messagingSenderId: '803274564320',
+    projectId: 'labtalk-d5395',
+    storageBucket: 'labtalk-d5395.firebasestorage.app',
+    iosBundleId: 'com.atthebench.labtalk',
   );
+
 }

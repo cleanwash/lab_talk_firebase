@@ -5,7 +5,7 @@ import 'package:lab_talk_firebase/presentation/login/login_screen.dart';
 import 'package:lab_talk_firebase/presentation/splash/splash_screen.dart';
 
 final router = GoRouter(
-  initialLocation: RouterPath.login,
+  initialLocation: RouterPath.splash,
   routes: [
     GoRoute(
       path: RouterPath.splash,

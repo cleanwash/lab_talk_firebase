@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDnk_MdAlc5qHElgDmiJOfT-gYN1JauwhY</string>
+	<string>AIzaSyB1d2KIEbA1JxwSlKidNfuQnG1L8f-G9SM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>792440359626</string>
+	<string>803274564320</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.labtalks.labtalk</string>
+	<string>com.atthebench.labtalk</string>
 	<key>PROJECT_ID</key>
-	<string>labtalk-8ad4d</string>
+	<string>labtalk-d5395</string>
 	<key>STORAGE_BUCKET</key>
-	<string>labtalk-8ad4d.firebasestorage.app</string>
+	<string>labtalk-d5395.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:792440359626:ios:c78f3ff8675b39136d0233</string>
+	<string>1:803274564320:ios:fe485c5d80ed982e8e2685</string>
 </dict>
 </plist>

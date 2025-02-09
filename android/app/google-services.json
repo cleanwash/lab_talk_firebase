@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "792440359626",
-    "project_id": "labtalk-8ad4d",
-    "storage_bucket": "labtalk-8ad4d.firebasestorage.app"
+    "project_number": "803274564320",
+    "project_id": "labtalk-d5395",
+    "storage_bucket": "labtalk-d5395.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:792440359626:android:94cc439d66ea49716d0233",
+        "mobilesdk_app_id": "1:803274564320:android:83de9193e41173288e2685",
         "android_client_info": {
-          "package_name": "com.labtalks.labtalk"
+          "package_name": "com.atthebench.labtalk"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAS_0d1r5XxWmCaIaRssy4Z2K8kfuMRPxk"
+          "current_key": "AIzaSyApLQoY6F9XNbqdhayvj1bZ5gDRtEgpZuE"
         }
       ],
       "services": {

@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:lab_talk_firebase/core/theme/default/theme.dart';
 import 'package:lab_talk_firebase/core/util/routing/router.dart';
 import 'package:lab_talk_firebase/firebase_options.dart';
 
@@ -19,10 +20,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: ThemeMode.light,
     );
   }
 }
