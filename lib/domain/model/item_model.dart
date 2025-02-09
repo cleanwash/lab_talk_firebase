@@ -1,16 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ItemModel {
-  final String? requestId; // 요청 ID
-  final String? buyerId; // 요청자 ID
-  final String productName; // 제품명
-  final String productCode; // 제품 코드
-  final String manufacturer; // 제조사
-  final String quantity; // 수량
-  final String? volume; // 용량
-  final String? description; // 추가 설명
-  final DateTime? requestDate; // 요청일
-  final String? status; //  상태 (대기중/견적완료/취소 등)
+  final String? requestId;
+  final String? buyerId;
+  final String productName;
+  final String productCode;
+  final String manufacturer;
+  final String quantity;
+  final String? volume;
+  final String? description;
+  final DateTime? requestDate;
+  final String? status;
+  final String? imageUrl; // 추가
   final DocumentReference? reference;
 
   ItemModel({
@@ -24,6 +25,7 @@ class ItemModel {
     this.description,
     this.requestDate,
     this.status,
+    this.imageUrl, // 추가
     this.reference,
   });
 
@@ -42,6 +44,7 @@ class ItemModel {
           ? (json['requestDate'] as Timestamp).toDate()
           : null,
       status: json['status'] as String?,
+      imageUrl: json['imageUrl'] as String?, // 추가
       reference: ref,
     );
   }
@@ -58,6 +61,7 @@ class ItemModel {
       if (description != null) 'description': description,
       if (requestDate != null) 'requestDate': Timestamp.fromDate(requestDate!),
       if (status != null) 'status': status,
+      if (imageUrl != null) 'imageUrl': imageUrl, // 추가
     };
   }
 
@@ -72,6 +76,7 @@ class ItemModel {
     String? description,
     DateTime? requestDate,
     String? status,
+    String? imageUrl, // 추가
     DocumentReference? reference,
   }) {
     return ItemModel(
@@ -85,6 +90,7 @@ class ItemModel {
       description: description ?? this.description,
       requestDate: requestDate ?? this.requestDate,
       status: status ?? this.status,
+      imageUrl: imageUrl ?? this.imageUrl, // 추가
       reference: reference ?? this.reference,
     );
   }
