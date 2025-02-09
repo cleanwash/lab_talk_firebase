@@ -38,6 +38,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final viewModel = context.watch<RegisterViewModel>();
     return Scaffold(
       appBar: AppBarCustom(
+        leadingIcon: IconButton(
+          onPressed: () => context.pop(),
+          icon: Icon(Icons.arrow_back),
+        ),
         title: 'Lab Talk 회원가입 하기',
       ),
       body: SingleChildScrollView(
