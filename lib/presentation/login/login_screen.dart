@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lab_talk_firebase/core/components/elevated_button_custom.dart';
+import 'package:lab_talk_firebase/core/components/snackbar_custom.dart';
 import 'package:lab_talk_firebase/core/components/text_form_field_custom.dart';
 import 'package:lab_talk_firebase/core/theme/palette.dart';
 import 'package:lab_talk_firebase/core/util/routing/router_path.dart';
@@ -61,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextFormFieldCustom(
                 controller: _passwordController,
                 hintText: '비밀번호',
-                isReadOnly: true,
+                isReadOnly: false,
               ),
               const SizedBox(height: 24),
 
@@ -77,6 +78,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           email: _emailController.text,
                           password: _passwordController.text,
                         );
+                        showSnackBarCustom(context, '로그인이 처리되었습니다');
+                        context.go(RouterPath.home);
                       },
                 style: const TextStyle(fontSize: 16),
               ),
@@ -132,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               ElevatedButtonCustom(
                 text: '이메일로 가입하기',
-                backgroundColor: Palette.black,
+                backgroundColor: Palette.green,
                 fontColor: Colors.white,
                 onLoginClick: () => context.go(RouterPath.register),
                 style: const TextStyle(fontSize: 16),

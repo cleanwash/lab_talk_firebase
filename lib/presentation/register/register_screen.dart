@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lab_talk_firebase/core/components/app_bar_custom.dart';
 import 'package:lab_talk_firebase/core/components/elevated_button_custom.dart';
+import 'package:lab_talk_firebase/core/components/snackbar_custom.dart';
 import 'package:lab_talk_firebase/core/components/text_form_field_custom.dart';
 import 'package:lab_talk_firebase/core/theme/palette.dart';
 import 'package:lab_talk_firebase/core/theme/typography.dart';
+import 'package:lab_talk_firebase/core/util/routing/router_path.dart';
 import 'package:lab_talk_firebase/presentation/register/register_view_model.dart';
 
 import 'package:provider/provider.dart';
@@ -74,7 +77,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   text: '가입하기',
                   style: titleMedium.copyWith(color: Palette.white),
                   backgroundColor: Palette.green,
-                  onLoginClick: () {},
+                  onLoginClick: () {
+                    if (_passwordController.text !=
+                        _passwordReController.text) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('비밀번호가 일치하지 않습니다.')),
+                      );
+                      return;
+                    }
+                    viewModel.signUp(
+                      email: _emailController.text,
+                      password: _passwordController.text,
+                    );
+                    showSnackBarCustom(context, '회원가입이 완료 되었습니다');
+                    context.go(RouterPath.login);
+                  },
                 ),
               ],
             ),

@@ -8,6 +8,7 @@ class RegisterState with _$RegisterState {
   factory RegisterState({
     @Default(false) bool isLoading,
     @Default(null) String? error,
+    @Default(false) isSuccess,
   }) = _RegisterState;
 
   factory RegisterState.fromJson(Map<String, dynamic> json) =>
