@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 배경 원 -->
+  <circle cx="256" cy="256" r="250" fill="#ffffff"/>
+  
+  <!-- 실험실 벤치 -->
+  <rect x="96" y="340" width="320" height="40" fill="#e0e0e0"/>
+  <rect x="86" y="380" width="340" height="20" fill="#d0d0d0"/>
+  
+  <!-- 파이펫 -->
+  <g transform="rotate(-45, 256, 256)">
+    <!-- 파이펫 본체 -->
+    <rect x="236" y="130" width="40" height="200" rx="10" fill="#2196f3"/>
+    <!-- 파이펫 팁 -->
+    <path d="M246 330 L266 330 L256 360 Z" fill="#1976d2"/>
+    <!-- 파이펫 상단 -->
+    <rect x="226" y="110" width="60" height="30" rx="5" fill="#64b5f6"/>
+    <!-- 눈금 표시 -->
+    <rect x="251" y="150" width="10" height="2" fill="white"/>
+    <rect x="251" y="180" width="10" height="2" fill="white"/>
+    <rect x="251" y="210" width="10" height="2" fill="white"/>
+    <rect x="251" y="240" width="10" height="2" fill="white"/>
+    <rect x="251" y="270" width="10" height="2" fill="white"/>
+  </g>
+  
+  <!-- 액체 방울 -->
+  <circle cx="180" cy="300" r="15" fill="#90caf9" opacity="0.8"/>
+  <circle cx="340" cy="280" r="10" fill="#90caf9" opacity="0.6"/>
+</svg>
