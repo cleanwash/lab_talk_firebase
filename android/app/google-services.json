@@ -12,7 +12,20 @@
           "package_name": "com.atthebench.labtalk"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "803274564320-62lou8m10dsadpqpd193dhikgjkv8llj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.atthebench.labtalk",
+            "certificate_hash": "7e10eb86f275c0de4ed45890f56e73c0d08cfee6"
+          }
+        },
+        {
+          "client_id": "803274564320-or601drjjf4npe9ktvde0p9ikjp286o6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyApLQoY6F9XNbqdhayvj1bZ5gDRtEgpZuE"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803274564320-or601drjjf4npe9ktvde0p9ikjp286o6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "803274564320-0d65qj0eb0r2oikg8ushl2c1njh913dl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.atthebench.labtalk"
+              }
+            }
+          ]
         }
       }
     }

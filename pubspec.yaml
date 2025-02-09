@@ -44,7 +44,7 @@ dependencies:
   introduction_screen: ^3.1.14
   json_annotation: ^4.9.0
   kakao_flutter_sdk: ^1.4.2
-  kakao_flutter_sdk_user: ^1.4.2
+  kakao_flutter_sdk_user: ^1.9.6
   provider: ^6.1.2
   shared_preferences: ^2.3.5
   sign_in_with_apple: ^6.1.4

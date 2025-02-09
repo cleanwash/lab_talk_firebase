@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lab_talk_firebase/data/data_source/email_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/google_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/kakao_auth.dart';
+import 'package:lab_talk_firebase/domain/model/user_model.dart';
 import 'package:lab_talk_firebase/presentation/login/login_state.dart';
 
 class LoginViewModel with ChangeNotifier {
@@ -29,6 +31,22 @@ class LoginViewModel with ChangeNotifier {
 
       final userCredential = await googleAuth.signInWithGoogle();
       _user = userCredential.user;
+
+      if (_user != null) {
+        final userModel = UserModel(
+          uid: _user!.uid,
+          email: _user!.email!,
+          displayName: _user!.displayName,
+          photoURL: _user!.photoURL,
+          isSeller: false,
+          loginType: LoginType.google,
+        );
+
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(_user!.uid)
+            .set(userModel.toMap());
+      }
 
       _state = state.copyWith(
         isLoading: false,

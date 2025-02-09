@@ -32,7 +32,7 @@ class KakaoAuth {
   Future<UserCredential> _signInWithFirebase() async {
     print("Firebase 연동 시작");
     try {
-      var provider = OAuthProvider("oidc.flightdiary");
+      var provider = OAuthProvider("oidc.labtalk");
       OAuthToken token = await UserApi.instance.loginWithKakaoAccount();
       var credential = provider.credential(
         idToken: token.idToken,
