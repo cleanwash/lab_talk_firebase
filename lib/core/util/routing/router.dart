@@ -6,6 +6,7 @@ import 'package:lab_talk_firebase/data/data_source/google_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/kakao_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/splash_screen_items.dart';
 import 'package:lab_talk_firebase/presentation/home/home_screen.dart';
+import 'package:lab_talk_firebase/presentation/home/home_view_model.dart';
 import 'package:lab_talk_firebase/presentation/login/login_screen.dart';
 import 'package:lab_talk_firebase/presentation/login/login_view_model.dart';
 import 'package:lab_talk_firebase/presentation/notification/notification_screen.dart';
@@ -61,7 +62,10 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: RouterPath.home,
-              builder: (context, state) => HomeScreen(),
+              builder: (context, state) => ChangeNotifierProvider(
+                create: (context) => HomeViewModel(),
+                child: HomeScreen(),
+              ),
             ),
           ],
         ),

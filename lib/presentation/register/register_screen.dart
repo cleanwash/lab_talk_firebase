@@ -39,7 +39,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       appBar: AppBarCustom(
         leadingIcon: IconButton(
-          onPressed: () => context.pop(),
+          onPressed: () => context.go(RouterPath.login),
           icon: Icon(Icons.arrow_back),
         ),
         title: 'Lab Talk 회원가입 하기',

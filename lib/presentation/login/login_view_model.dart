@@ -23,7 +23,6 @@ class LoginViewModel with ChangeNotifier {
 
   User? _user;
   User? get user => _user;
-
   Future<void> signInWithGoogle() async {
     try {
       _state = state.copyWith(isLoading: true);
@@ -33,6 +32,7 @@ class LoginViewModel with ChangeNotifier {
       _user = userCredential.user;
 
       if (_user != null) {
+        // UserModel 생성 및 Firestore에 저장
         final userModel = UserModel(
           uid: _user!.uid,
           email: _user!.email!,
@@ -70,6 +70,23 @@ class LoginViewModel with ChangeNotifier {
 
       final userCredential = await kakaoAuth.signInWithKakao();
       _user = userCredential.user;
+
+      if (_user != null) {
+        // UserModel 생성 및 Firestore에 저장
+        final userModel = UserModel(
+          uid: _user!.uid,
+          email: _user!.email!,
+          displayName: _user!.displayName,
+          photoURL: _user!.photoURL,
+          isSeller: false,
+          loginType: LoginType.kakao,
+        );
+
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(_user!.uid)
+            .set(userModel.toMap());
+      }
 
       _state = state.copyWith(
         isLoading: false,

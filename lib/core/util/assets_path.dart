@@ -23,10 +23,8 @@ class AssetsPath {
       'assets/fonts/PretendardVariable.ttf';
   //icons
   static const String home = 'assets/icons/home.svg';
-
   static const String schedule = 'assets/icons/schedule.svg';
-
   static const String report = 'assets/icons/report.svg';
-
   static const String notification = 'assets/icons/notifications.svg';
+  static const String labtalk = 'assets/icons/labtalk.svg';
 }
