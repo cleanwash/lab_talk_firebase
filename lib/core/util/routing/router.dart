@@ -5,6 +5,8 @@ import 'package:lab_talk_firebase/data/data_source/email_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/google_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/kakao_auth.dart';
 import 'package:lab_talk_firebase/data/data_source/splash_screen_items.dart';
+import 'package:lab_talk_firebase/presentation/create_item/create_item_screen.dart';
+import 'package:lab_talk_firebase/presentation/create_item/create_item_view_model.dart';
 import 'package:lab_talk_firebase/presentation/home/home_screen.dart';
 import 'package:lab_talk_firebase/presentation/home/home_view_model.dart';
 import 'package:lab_talk_firebase/presentation/login/login_screen.dart';
@@ -44,6 +46,13 @@ final router = GoRouter(
           emailAuth: EmailAuth(),
         ),
         child: RegisterScreen(),
+      ),
+    ),
+    GoRoute(
+      path: RouterPath.createItem,
+      builder: (context, state) => ChangeNotifierProvider(
+        create: (context) => CreateItemViewModel(),
+        child: CreateItemScreen(),
       ),
     ),
     StatefulShellRoute.indexedStack(
